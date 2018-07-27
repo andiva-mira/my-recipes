@@ -1,7 +1,8 @@
 {
-  "name": "my-recipe-app",
+  "name": "my-recipes",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://andiva-mira.github.io/my-recipes",
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
@@ -16,6 +17,8 @@
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
