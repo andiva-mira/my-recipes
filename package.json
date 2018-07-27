@@ -1,7 +1,7 @@
 {
   "name": "my-recipes",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://andiva-mira.github.io/my-recipes",
   "dependencies": {
     "react": "^16.4.1",
