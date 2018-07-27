@@ -6,10 +6,12 @@
 }
 
 .category-item {
-		background: rgba($primary,.9);
+		background: lighten($primary, 5);
 		border-bottom: 2px solid $primary;
 		position: relative;
+		overflow: hidden;
 		width: 100%;
+
 
 		@include mq(xxsmall) {
 			width: 50%;
@@ -29,26 +31,34 @@
 			background: none;
 			clip-path: circle(63% at 50% 75%);
 			transition: all .5s cubic-bezier(.04, .47, .64, .96);
-			@include imageLoad;
-				&::before {
-					z-index: -1;
+		 	@include imageLoad;
 
-				}
+		 	&::before {
+		 		content: '';
+		 	}
 
 		}
 
 		&:nth-of-type(odd) {
 				background: #f1f1f1;
 				border-bottom-color: #dedede;
+
+
+		}
+
+		.LazyLoad.is-visible {
+			@include flex-col;
+
 		}
 
 		img {
 				color: transparent;
-				padding: 20px;
+				padding: 15px;
 				transition: filter .5s cubic-bezier(.04, .47, .64, .96);
+				width: 100%;
 
 				@include mq(xlarge) {
-					padding: 50px;
+					padding: 30px;
 				}
 		}
 
@@ -72,6 +82,7 @@
 
 		a:hover {
 			background: rgba(255, 255, 255, .35);
+			// background: darken(#f1f1f1, 5);
 			clip-path: circle(55% at 50% 75%);
 			
 			img {

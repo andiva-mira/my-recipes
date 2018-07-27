@@ -244,7 +244,7 @@
 }
 
 /**Image Load Effect**/
-@mixin imageLoad($bgSize: 50px, $color: $primary, $font: $fontSize) {
+@mixin imageLoad($bgSize: 50px, $color: $primary, $font: $fontSize * .8) {
 	position: relative;
 
 		&::before {
@@ -262,7 +262,7 @@
 		text-align: center;
 		font-size: $font;
 		letter-spacing: 1px;
-		padding-top: 47%;
+		padding-top: 20%;
 		z-index: -1;
 	}
 }
