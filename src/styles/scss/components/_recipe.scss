@@ -1,0 +1,331 @@
+/***** Recipe Details*****/
+
+.recipe-details {
+		color: #777;
+		margin: 0px auto 50px;
+		width: 95%;
+
+		@include mq(xxsmall) {
+			width: 90%;
+		}
+
+		@include mq(small) {
+			width: 100%;
+		}
+
+		.heading-container h2 {
+			font-size: 1.5rem;
+			
+			@include mq(xxsmall) {
+				font-size:2rem;
+			}
+
+			@include mq(medium) {
+				font-size: 3.5rem;
+			}
+
+			span {
+				color: $primary_L;
+				font-weight: bold;
+				display: block;
+
+				@include mq(xxsmall) {
+					display: inline-block;
+				}
+			}
+			
+		}
+
+		p {
+			text-align: center;
+		}
+
+		h4 {
+			color: $primary;
+			font-size:$fontSize * 3;
+			margin: 10px auto 50px;
+			@include Lines;
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+
+
+		&--item {
+			max-width: 1200px;
+			margin: 20px auto;
+
+			@include mq(small) {
+				@include flex-row-w($align-items: stretch, $justify-content: space-around);
+
+			}
+
+			&__block1  {
+				background-color: $primary_XL;
+				background-image: url(../../images/food-bg-2-dark.png);
+				background-repeat: no-repeat;
+				background-position: 98% 98%;
+				background-size: 130px;
+				
+				@include mq(small) {
+					width: 50%;
+				}
+
+			}
+
+			&__block2 {
+				background-color: #f1f1f1;
+
+				@include mq(small) {
+					width: 50%;
+				}
+
+				@include mq(medium) {
+					width: 40%;
+				}
+				
+			}
+
+			&__block3 {
+				margin-top: 50px;
+
+				@include mq(small) {
+					width: 95%;
+				}
+			}
+
+		}
+
+		&--ingredients {
+			
+
+		}
+
+
+		.ingredients-container {
+			padding: 0px 10px 30px 10px;
+			@include flex-row-n;
+
+			@include mq(xxsmall) {
+				padding: 0px 30px 30px 30px;
+			}
+		}
+
+
+		.recipe-ingredients-list {
+			max-width: 210px;
+			width: 65%;
+
+			@include mq(xxsmall) {
+				width: 50%;
+			}
+
+			li {
+
+				@include flex-row-n($justify-content: left);
+				height: 80px;
+				margin: 15px 0;
+				background-color: $primary_XL;
+				padding: 0 20px;
+				border-radius: 40px 0 0 40px;
+				word-wrap: break-word;
+
+
+
+				span {
+					color: darken($primary_L, 13);
+
+					@include mq(xsmall) {
+						font-size: $fontSize;
+					}
+
+				}
+			}
+
+			img {
+				width: 50px;
+				height: 50px;
+				margin: .3rem;
+				font-size: $fontSize * .8;
+
+				@include mq(xsmall) {
+					width: 70px;
+					height: 70px;
+				}
+			}
+		}
+
+		.recipe-measures-list {
+			max-width: 210px;
+			width: 35%;
+
+			@include mq(xxsmall) {
+				width: 50%;
+			}
+
+			li {
+				border-radius: 0 40px 40px 0;
+				color: #fff;
+				font-size: .9rem;
+				height: 80px;
+				margin: 15px 0;
+				background: $primary;
+				text-align: center;
+				padding-top: 30px;
+				font-style: italic;
+				word-wrap: break-word;
+			}
+		}
+
+		&-img {
+			clip-path: ellipse(95% 95% at 50% 0);
+			@include imageLoad;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		&-subtitles {
+			background-color: $primary;
+			color: $primary_XL;
+			font-size: $fontSize * 1.2;
+			line-height: 1.1;
+			padding: 0 20px;
+
+			&__inner {
+				background-color: $primary_XL;
+				clip-path: circle(60% at 50% 0%);
+				width: 85%;
+				height: 130px;
+				margin: auto;
+
+				@include mq(xsmall) {
+					clip-path: circle(50% at 50% 0%);
+				}
+			}
+
+			p {
+				color: $primary;
+				font-size: $fontSize * .8;
+				letter-spacing: 1px;
+
+				&:nth-of-type(1) {
+					padding-top: 35px;
+				}
+
+				@include mq(medium) {
+					font-size: $fontSize * 1.1;
+					letter-spacing: 2px;
+
+				}
+
+				span {
+					color: darken($primary_L, 13);
+					text-transform: uppercase;
+				}
+			}
+		}
+
+		&-instructions {
+			padding-bottom: 50px;
+
+			p {
+				padding: 20px 40px;
+				text-align: justify;
+
+				@include mq(medium) {
+					column-count: 2;
+				}
+			}
+		}
+
+		&-video {
+			background-color: $primary_XL;
+
+			@include mq(small) {
+				&__header {
+					background-image: url(../../images/food-bg-1-dark.png);
+					background-repeat: no-repeat;
+					background-position: 98% 100%;
+					position: relative;
+
+				}
+
+			}
+			
+			@include mq(medium) {
+				@include flex-row-n($align-items: stretch);
+				
+
+				&__header {
+					background-position: 50% 70%;
+					width: 30%;
+				}
+
+				.iframe-holder {
+					width: 70%;
+
+					@include mq(medium) {
+						clip-path: ellipse(70% 90% at 70% 50%);
+					}
+				}
+
+			}
+
+			h4 {
+				color: $primary;
+
+			}
+
+			img {
+				display: inline-block;
+				width: 40px;
+				vertical-align: middle;
+				margin-right: 10px;
+			}
+
+
+
+		}
+
+		&-button {
+			text-transform: uppercase;
+
+			a {
+				color: #fff;
+				line-height: 2;
+			}
+		}
+
+		.home-button  {
+			margin: 30px auto;
+			max-width: 300px;
+
+			width: 70%;
+			@include btnHoverEffect($primary_L, darken($primary, 8), darken($primary_XL,5), $homeIcon);
+
+			@include mq(medium) {
+				margin-top: 20%;
+				position: absolute;
+				bottom: 50px;
+				left: 50%;
+				transform: translate3d(-50%, 0, 0);
+			}
+
+			a span {
+				font-size: 1.1rem;
+
+			}
+
+		}
+
+	
+
+
+}
+
+
+

@@ -1,0 +1,81 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+::-moz-selection {
+  background:  #ffdc59;
+  color: #fff;
+}
+
+::selection {
+  background:  #ffdc59;
+  color: #fff;
+}
+
+body {
+    font-family: $fontText;
+    font-size: $fontSize;
+    margin: 0;
+    overflow-x: hidden;
+    position: relative;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $fontTitle;
+  text-align: center;
+}
+
+h1 {
+  font-size: $fontSize * 3;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+ 
+a {
+  color: $primary;
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+   text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: $fontText;
+
+}
+
+button:focus {
+  outline: none;
+}
+
+.iframe-holder {
+  width: 100%;
+  padding-bottom: 56%;
+  position: relative;
+  height: 0;
+}
+
+iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.App {
+  
+}
+

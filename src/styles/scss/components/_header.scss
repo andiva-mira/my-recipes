@@ -1,0 +1,39 @@
+header {
+		@include flex-col($justify-content:space-between);		
+		@include wave($primary_L,  #fff, #f1f1f1);
+		height: 210px;
+		padding: 0 30px;
+		
+		&.secondary {
+			height: 140px;
+		}
+
+		@include mq(small) {
+			@include flex-row-w($justify-content:space-between);
+			height: 140px;
+		}
+}
+
+.page-title {
+		@include flex-row-n($justify-content:space-between, $align-items: center);	
+		margin: 0;
+		text-transform: uppercase;
+		padding: 15px 0;
+
+		h1 {
+				color: #f1f1f1;
+				font-family:$fontCursive;
+				font-size: $fontSize * 2.5;
+				margin: 0 0 0 5px;
+				text-transform: none;
+		}
+}
+
+.logo {
+		width: 80px;
+		height: 80px;
+
+		img {
+
+		}
+}

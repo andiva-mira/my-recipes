@@ -1,0 +1,14 @@
+body {
+	@include dots(#fff, #f1f1f1);
+}
+
+.home-container {
+  margin: auto;
+  max-width: 1600px;
+  width: 90%;
+
+  @include mq(medium) {
+  	width: 100%;
+  }
+
+}

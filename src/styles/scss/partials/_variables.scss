@@ -1,0 +1,57 @@
+/***Colours****/
+
+
+/***
+L - light
+XL - extra light
+***/
+
+
+/********Themes********/
+
+//Replace theme variable with the following allowed values: Null, Pink, Theme2....
+$theme: Null;
+
+// Default Blue theme 
+$primary_XL: #e2e7e9;
+$primary_L: #B9C6CA;
+$primary: #687A80;
+$primaryB: #ffdc59;
+
+// all themes color config
+// fontface
+$fontSize: 1rem;
+$fontCursive: 'Italianno', cursive;
+$fontTitle: 'Oswald', sans-serif;
+$fontText : 'Raleway', sans-serif;
+
+// Btn icons
+$searchBtnIcon: '../../images/search.svg';
+$searchMessageIcon: '../../images/exit.svg';
+$viewRecipeIcon: '../../images/recipe-w.svg';
+$homeIcon: '../../images/house.svg';
+
+
+@if $theme== Pink {
+	$primary_XL: #F6DDDF;
+	$primary_L: #EEC9C8;
+	$primary: #DF9C9D;
+}
+
+@else if $theme==Theme2 {
+
+	/***Colour values here**/
+}
+
+
+// media query breakpoints map
+$breakpoints: ( 
+	xxsmall: 480px,
+	xsmall: 640px,
+	small: 768px,
+	medium: 992px,
+	lmedium: 1024px,
+	large: 1200px,
+	xlarge: 1366px,
+	xxlarge: 1600px
+);

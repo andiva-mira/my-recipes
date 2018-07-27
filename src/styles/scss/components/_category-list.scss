@@ -1,0 +1,220 @@
+.category-list {
+	@include flex-row-w;
+	color: #777;
+
+	&--item {
+		background-color: $primary;
+		max-width: 1600px;
+		width: 90%;
+		margin: 30px auto;
+		@include flex-col;
+
+			&:first-child {
+				margin-top:0;
+			}
+
+		@include mq(small) {
+			width: 45%;
+
+			&:first-child {
+				margin-top: 30px;
+			}
+
+		}
+
+
+		@include mq(medium) {
+			margin: 50px auto;
+			@include flex-row-n($align-items: stretch);
+			width: 90%;
+			
+			&:first-child {
+				margin-top:0;
+			}
+
+		}
+
+	
+		&:nth-of-type(even)  {
+			background-color: $primary_XL;
+
+			.home-button {
+				@include btnHoverEffect($primary_L, darken($primary, 8), darken($primary_XL,5), $viewRecipeIcon);
+			}
+
+			.category-list--img {
+				background-color: $primary_L;
+			}
+
+			.category-list--summary {
+				background-image: url(../../images/food-bg-2-dark.png);
+
+				&__title {
+					h3 {
+						color: $primary;
+					}
+				}
+			}
+
+
+
+			@include mq(medium) {
+				.category-list--img {
+					clip-path: ellipse(65% 75% at 70% 50%);
+				    order: 2;
+				}
+
+			}
+
+		}
+
+	}
+
+	&--img  {
+		background-color: $primary_XL;
+		clip-path: ellipse(95% 95% at 50% 0);
+		width: 100%;
+		@include imageLoad;
+
+		@include mq(medium) {
+			clip-path: ellipse(100% 100% at 0 50%);
+			width: 40%;
+		}
+
+
+		img {
+			display: block;
+			text-align: center;
+			color: transparent;
+		}
+	}
+
+
+
+	&--summary {
+		background-image: url(../../images/food-bg-1.png);
+		background-position: 98% 98%;
+		background-repeat: no-repeat;
+		color: #fff;
+		position: relative;
+		width: 100%;
+
+		@include mq(small) {
+			min-height: 400px;
+			height: 400px;
+
+		}
+
+		@include mq(medium) {
+			background-position: 50% 75%;
+			background-size: 135px;
+			width: 60%;
+			height: auto;
+		}
+
+		@include mq(large) {
+			background-size: 150px;
+
+		}
+
+
+		&__title {
+			line-height: 1.2;
+			max-width: 500px;
+			margin: 20px auto;
+			text-transform: uppercase;
+			font-size: $fontSize * 2;
+			padding:  0;
+
+			@include mq(medium) {
+				font-size: $fontSize * 3.3;
+			}
+
+			@include mq(large) {
+				font-size: $fontSize * 3.5;
+			}
+
+			@include mq(xlarge) {
+				font-size: $fontSize * 4.2;
+			}
+
+			@include mq(xxlarge) {
+				font-size: $fontSize * 5;
+			}
+
+			h3 {
+				color: $primary_L;
+				margin: 0 auto;
+
+				@include mq(medium) {
+					margin: 30px auto;
+				}
+			}
+			
+		}
+
+		&__buttons {
+			position: relative;
+			bottom: 0;
+			width: 100%;
+
+			@include mq(xsmall) {
+				@include flex-row-w($justify-content: space-evenly);
+
+			}
+
+
+			@include mq(medium) {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+		}
+
+		.recipe-button, .home-button  {
+			margin: 30px auto;
+			width: 70%;
+			@include btnHoverEffect($primary_L, darken($primary, 8), $primary_XL, $homeIcon);
+
+			@include mq(xsmall) {
+				margin: 0 0 30px 0;
+				max-width: 200px;
+				width: 40%;
+
+			}
+
+			@include mq(small) {
+				max-width: 80%;
+				width: 80%;
+			}
+
+			@include mq(medium) {
+				max-width: 200px;
+				width: 40%;
+			}
+
+			@include mq(xxlarge) {
+				margin: 0 0 60px 0;
+				max-width: 300px;
+			}
+
+
+		}
+
+		.recipe-button {
+			@include btnHoverEffect($primary_L, darken($primary, 8), darken($primaryB,7), $viewRecipeIcon);
+
+			a  {
+				font-size: $fontSize;
+
+				span {
+					color: #fff;
+				}
+			}
+
+
+
+		}
+	}
+	
+}

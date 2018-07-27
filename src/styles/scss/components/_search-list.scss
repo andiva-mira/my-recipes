@@ -1,0 +1,209 @@
+
+.search-container {
+	@include dots(#fff, #f1f1f1);
+	position: absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right: 0;	
+	width: 100%;
+	z-index: 100;
+
+	.heading-container {
+		position: relative;
+		width: 100%;
+
+		h2 {
+			background-image: url(../../images/search-dark.svg);
+			background-position: left 50%;
+			font-size: $fontSize * 2;
+			line-height: 1.1;
+			margin: 40px auto 0;
+			padding: 20px;
+			max-width: 95%;
+
+			span:first-child {
+				padding-left: 20px;
+			}
+
+			span:last-child {
+				color: $primary_L;
+			}
+
+			@include mq(small) {
+				background-position: left 60%;
+				background-size: 50px;
+				font-size: $fontSize * 3;
+
+				span:first-child {
+					padding-left: 40px;
+				}
+
+			}
+
+		}
+
+		.close-search-button {
+			background-image: url(../../images/close.svg);
+			background-repeat: no-repeat;
+			background-size: 30px;
+			position: absolute;
+			right: 10px;
+			top: 25px;
+			color: transparent;
+			background-color: transparent;
+			border: none;
+			width: 40px;
+			height: 40px;
+
+			&:hover {
+				transform: rotate(180deg);
+				transform-origin: 38% 38%;
+				transition: transform .8s linear; 
+			}
+		}
+	}	
+}
+
+.search-list {
+	@include flex-row-w;
+	margin: auto;
+	max-width: 1600px;
+
+	&--item {
+		background-color: $primary;
+		max-width: 1600px;
+		width: 90%;
+		margin: 30px auto;
+		@include flex-col;
+
+			&:first-child {
+				// margin-top:0;
+			}
+
+			@include mq(small) {
+				width: 45%;
+
+				&:first-child {
+					margin-top: 30px;
+				}
+
+			}
+
+			@include mq(xlarge) {
+				width: 30%;
+
+			}
+
+			&:nth-of-type(even)  {
+				background-color: $primary_XL;
+
+				.search-list--summary {
+					background-image: url(../../images/food-bg-2-dark.png);
+
+					&__title {
+						h3 {
+							color: $primary;
+						}
+					}
+				}
+
+			}
+
+
+	}
+
+	
+	&--img {
+		clip-path: ellipse(95% 95% at 50% 0);
+		width: 100%;
+
+
+		img {
+			display: block;
+		}
+	}
+
+	&--summary {
+		background-image: url(../../images/food-bg-1.png);
+		background-position: 50% 60%;
+		background-repeat: no-repeat;
+		background-size: 100px;
+		color: #fff;
+		position: relative;
+		min-height: 270px;
+		height: 270px;
+		width: 100%;
+
+		@include mq(xsmall) {
+			background-size: 135px;
+		}
+
+		@include mq(small) {
+			background-position: 50% 70%;
+			min-height: 370px;
+			height: 370px;
+
+		}
+
+		@include mq(medium) {
+			background-size: 150px;
+		}
+
+		@include mq(large) {
+			height: 430px;
+		}
+
+		@include mq(large) {
+			height: 450px;
+		}
+
+
+
+
+		&__title {
+			line-height: 1.2;
+			max-width: 500px;
+			margin: 20px auto;
+			text-transform: uppercase;
+			font-size: $fontSize * 2;
+			padding:  0;
+
+			@include mq(small) {
+				font-size: $fontSize * 3;
+			}
+
+			@include mq(xlarge) {
+				font-size: $fontSize * 3.5;
+			}
+
+			h3 {
+				color: $primary_L;
+				margin: 0 auto;
+				max-width: 95%;
+
+				@include mq(medium) {
+					margin: 30px auto;
+				}
+			}
+			
+		}
+
+		&__buttons {
+			position: absolute;
+			bottom: 0;
+			width: 100%;			
+
+			@include mq(medium) {
+
+			}
+		}
+
+		.recipe-button {
+			margin: 30px auto;
+			max-width: 250px;
+			width: 70%;
+
+		}
+	}
+}
