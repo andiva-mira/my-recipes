@@ -1,18 +1,18 @@
 import React from 'react';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import {HashRouter, Switch, Route} from 'react-router-dom';
 
 import App from '../App';
 import Recipe from './recipes/Recipe';
 import Category from './categories/Category';
 
 const Router = () => (
-	<BrowserRouter>
+	<HashRouter>
 		<Switch>
 			<Route path="/" component={App} exact />
 			<Route path="/recipe=:title" component={Recipe} />
 			<Route path="/category=:title" component={Category} />
 		</Switch>
-	</BrowserRouter>
+	</HashRouter>
 
 );
 
